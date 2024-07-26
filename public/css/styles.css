@@ -1,0 +1,35 @@
+#yourNextStep .jumbotron, #coachingPath .jumbotron{
+	background-color:#F9F9F9;
+	border-top:solid 1px #999;
+	padding:10px;
+}
+
+#gtky-tabs .active{
+	color:#000;	
+}
+#gtky-tabs a{
+	color:#CCC;	
+}
+#bar-list, #vi-list-1,#vi-list-2{
+	padding:0;
+}
+#bar-list li,#vi-list-1 li, #vi-list-2 li{
+	padding:10px 10px 10px 0px;
+	margin: 6px;
+}
+.ui-state-highlight{
+	list-style:none;
+}
+#vi-list-1{
+	border: 3px solid #FF0;
+	margin:0;
+	padding:0;
+}
+#vi-numbers{
+	padding:0;	
+	list-style-type: none;
+}
+#vi-numbers li{
+	padding:10px 30px 10px 20px;
+	margin: 6px;
+}

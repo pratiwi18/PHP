@@ -1,0 +1,42 @@
+<?php
+		$pid = $_GET['pid'];
+		$sql = "SELECT * FROM message where participantid=$pid";
+		$messages = message::find_by_sql($sql);
+?>
+	<div class="row">
+		<div id="addButton" class="col-sm-12 ml-sm-auto col-md-12 pt-5 text-center">
+			<p>All messages</p>
+		</div>
+
+		<div id="#demo-order-list" class="col-sm-12 ml-sm-auto col-md-12 pt-5">
+			<input type='hidden' id='ssort' name="ssort" value='desc'>
+			<table id='empTable' class="table table-hover text-center">
+				<thead>
+					<tr>
+						<th class="text-center">From</th>
+						<th class="text-center">Message</th>
+						<th class="text-center">Date</th>
+					</tr>
+				</thead>
+				<tbody>
+	<?php
+		foreach($messages as $message){	
+	?>
+						<tr>
+							<th scope="row">
+								<?php echo $message->coachid?>
+							</th>
+							<td>
+								<?php echo $message->content?>
+							</td>
+							<td>
+								<?php echo $message->send_date?>
+							</td>
+						</tr>
+						<?php
+	}
+	?>
+				</tbody>
+			</table>
+		</div>
+	</div>
